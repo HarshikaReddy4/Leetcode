@@ -1,0 +1,9 @@
+
+1. Check if the given number `x` is negative. If it is, it cannot be a palindrome because negative numbers cannot be palindromes, so return `false`.
+2. Initialize a variable `reversed` to store the reverse of the number. Also, initialize a temporary variable `temp` and set it equal to `x`.
+3. Run a loop until `temp` becomes 0:
+   a. Get the last digit of `temp` by taking the remainder when divided by 10.
+   b. Append this digit to the `reversed` variable after shifting `reversed` to the left by one digit and adding the current digit.
+   c. Divide `temp` by 10 to remove the last digit.
+4. After the loop, check if the `reversed` number is equal to the original number `x`. If they are equal, return `true`; otherwise, return `false`.
+
