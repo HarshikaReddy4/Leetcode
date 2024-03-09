@@ -1,0 +1,18 @@
+
+
+1. **Initialize `prev` and `current`:**
+   - Initialize a variable `prev` to `null`. This will keep track of the previous node during the reversal process.
+   - Assign the input `head` to a variable `current`. This will be used to traverse the original list.
+
+2. **Iterate through the list:**
+   - Start a loop that continues as long as `current` is not `null`.
+   - Inside the loop:
+     - Store the `next` node of `current` in a temporary variable. This is necessary because we're going to change the reference of `current.next`.
+     - Set the `next` pointer of `current` to point to the previous node (`prev`). This effectively reverses the pointer direction, making `current` point to the previous node instead of the next node in the original list.
+     - Move `prev` to `current`, and `current` to `next`, effectively moving one step forward in the list.
+
+3. **Return the new head of the reversed list:**
+   - Once the loop exits (when `current` becomes `null`, meaning we've reached the end of the original list), `prev` will be pointing to the last node of the original list, which is now the first node of the reversed list.
+   - Return `prev`, which is the new head of the reversed list.
+
+This algorithm iterates through the original list, reversing the pointers of each node to point to the previous node. Finally, it returns the new head of the reversed list.
