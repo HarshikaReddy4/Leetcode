@@ -1,0 +1,13 @@
+Initialize two pointers: Initialize two pointers, slow and fast, and set both to the head of the linked list.
+
+Traverse the linked list:
+
+Move the slow pointer one step at a time.
+Move the fast pointer two steps at a time.
+Find the middle node:
+
+Continue moving the pointers until the fast pointer reaches the end of the list.
+When the fast pointer reaches the end (i.e., fast.next is null), the slow pointer will be at the middle of the list.
+Return the middle node:
+
+Return the node pointed to by the slow pointer, which is the middle node of the linked list.
