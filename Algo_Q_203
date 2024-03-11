@@ -1,0 +1,20 @@
+
+
+1. Start by handling the case where the value to be removed is at the head of the linked list.
+   - Check if the head is not null and its value is equal to the target value (`val`).
+   - If it is, move the head to the next node (`head = head.next`) until the head node no longer has the target value.
+2. Initialize a pointer `current` to the head of the linked list.
+3. Begin a loop that continues until `current` reaches the end of the list or the last node (when `current.next` is null).
+4. Inside the loop, check if the value of the next node (`current.next.val`) is equal to the target value (`val`).
+   - If it is, skip the next node by updating the `next` pointer of the current node.
+   - If it's not, move `current` to the next node in the list.
+5. Repeat this process until all nodes with the target value are removed.
+6. Finally, return the head of the modified list.
+
+Here's a step-by-step breakdown of the algorithm:
+
+- Start from the head of the list.
+- Handle the case where the head node itself needs to be removed (if its value equals the target value).
+- Traverse the list.
+- Remove nodes with the target value by updating the `next` pointer of the current node to skip nodes with the target value.
+- Return the head of the modified list.
