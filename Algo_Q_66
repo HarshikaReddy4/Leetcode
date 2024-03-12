@@ -1,0 +1,21 @@
+
+
+1. **Initialize variables**: 
+   - Set `s` to the length of the `digits` array.
+   - Set `i` to the length of the `digits` array minus 1.
+
+2. **Iterate through the digits array from right to left**:
+   - Start a while loop with the condition `i >= 0`.
+   - Inside the loop, check if the current digit (`digits[i]`) is 9.
+   - If the current digit is 9:
+     - Set the current digit to 0 (`digits[i] = 0`).
+     - Decrement `i` to move to the previous digit.
+   - If the current digit is not 9:
+     - Increment the current digit by 1 (`digits[i] = digits[i] + 1`).
+     - Return the updated `digits` array immediately.
+
+3. **Handle the case when all digits are 9**:
+   - If the loop completes without returning, it means all digits were 9.
+   - Initialize a new array `ans` of size `s + 1`.
+   - Set the first element of `ans` to 1 (`ans[0] = 1`).
+   - Return `ans`.
