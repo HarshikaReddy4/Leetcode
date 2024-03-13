@@ -1,0 +1,14 @@
+
+1. **Initialization**: It begins by creating a `dummyHead` node to hold the result of the sum. `tail` points to the last node of the result initially, which is the dummy head. `carry` is initialized to 0.
+
+2. **Traversal and Addition**: It iterates through both linked lists (`l1` and `l2`) simultaneously until both lists reach their end (`null`). For each iteration:
+   - It retrieves the current digits from both lists (`l1` and `l2`). If either list has reached its end, it assumes the digit to be 0.
+   - It calculates the sum of the digits along with the carry from the previous step.
+   - It calculates the new digit for the result by taking the remainder of the sum divided by 10 (this handles cases where the sum exceeds 9).
+   - It updates the carry for the next iteration by taking the integer division of the sum by 10.
+   - It creates a new node with the calculated digit and appends it to the result linked list.
+   - It moves to the next nodes in both input lists (`l1` and `l2`) if they exist.
+
+3. **Finalization**: Once both input lists are exhausted and there's no carry left, the loop ends. The `dummyHead.next` now points to the actual result of the addition. The `dummyHead.next` is disconnected from the dummy node to separate it, and then it's returned as the result.
+
+This algorithm ensures that digits are added correctly, considering any carryovers that might occur during the addition process.
