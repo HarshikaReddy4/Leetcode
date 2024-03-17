@@ -1,0 +1,8 @@
+Initialize an empty StringBuilder to store the result.
+Initialize an index variable i to 0.
+Iterate through both input strings (word1 and word2) until both strings are fully traversed.
+Within each iteration:
+If the index i is within the bounds of word1 (i.e., less than word1.length()), append the character at index i from word1 to the result StringBuilder.
+If the index i is within the bounds of word2 (i.e., less than word2.length()), append the character at index i from word2 to the result StringBuilder.
+Increment the index i.
+Return the final merged string obtained by converting the StringBuilder to a string
